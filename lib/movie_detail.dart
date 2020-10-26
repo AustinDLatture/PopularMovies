@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:movie_list/global.dart' as global;
 import 'package:movie_list/main.dart';
-import 'package:tmdb_api/tmdb_api.dart';
 
 class MovieDetail extends StatefulWidget {
   String title;
@@ -23,6 +23,10 @@ class MovieDetail extends StatefulWidget {
 class MovieDetailState extends State<MovieDetail> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: Center(

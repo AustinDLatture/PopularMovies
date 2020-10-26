@@ -99,10 +99,11 @@ class MovieListState extends State<MovieList> {
     return Scaffold(
       appBar: AppBar(title: Text(global.title)),
       body: Center(
-          child: ListView(
-        padding: EdgeInsets.all(8),
-        children: this.movieButtons,
-      )),
+        child: ListView(
+          padding: EdgeInsets.all(8),
+          children: this.movieButtons,
+        ),
+      ),
     );
   }
 }
